@@ -32,11 +32,10 @@ shinyServer(function(input, output, session) {
     
     vector_users <- vector()
     vector_sentiments <- vector()
-    keyword = "nike"
     tweets_result = ""
     
-    #tweets_result = searchTwitter("to:nike", n=200)
-    tweets_result = userTimeline("nike", n=1000)
+    #tweets_result = searchTwitter("to:chaturvedi_adi", n=200)
+    tweets_result = userTimeline("chaturvedi_adi", n=100)
     for (tweet in tweets_result){
       print(paste(tweet$screenName, ":", tweet$text))
       
